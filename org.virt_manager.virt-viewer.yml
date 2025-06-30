@@ -150,7 +150,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/virt-viewer/virt-viewer
-        commit: 82dbca46b605685ab354bf8cea7f2a2615132b39
+        commit: 107f60c168c405cf1782b686a65bf4af16ec8c9d
       - type: file
         path: remote-viewer.appdata.xml
         dest: .
