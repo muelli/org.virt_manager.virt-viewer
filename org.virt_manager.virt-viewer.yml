@@ -130,6 +130,21 @@ modules:
             url: >-
               https://files.pythonhosted.org/packages/e5/0c/0e3c05b1c87bb6a1c76d281b0f35e78d2d80ac91b5f8f524cebf77f51049/pyparsing-3.1.4-py3-none-any.whl
             sha256: a6a7ee4235a3f944aa1fa2249307708f893fe5717dc603503c6c7969c070fb7c
+      - name: python-six
+        buildsystem: simple
+        build-commands:
+          - pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} six
+        sources:
+          - type: file
+            url: https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz
+            sha256: ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81
+            x-checker-data:
+              type: pypi
+              name: six
+          - type: file
+            url: https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-75.6.0.tar.gz
+            sha256: 8199222558df7c86216af4f84c30e9b34a61d8ba19366cc914424cdbd28252f6
+
   - name: virt-viewer
     buildsystem: meson
     post-install:
